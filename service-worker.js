@@ -6,7 +6,8 @@ const FILES_TO_CACHE = [
   '/solartech-page/styles.css',
   '/solartech-page/script.js',
   '/solartech-page/icon-192.png',
-  '/solartech-page/icon-512.png'
+  '/solartech-page/icon-512.png',
+  'https://upload.wikimedia.org/wikipedia/commons/4/4d/Solar_panels_roof_mounted.jpg'
 ];
 
 self.addEventListener('install', evt => {
@@ -30,4 +31,5 @@ self.addEventListener('fetch', evt => {
     caches.match(evt.request).then(resp => resp || fetch(evt.request))
   );
 });
+
 
